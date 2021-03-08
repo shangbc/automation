@@ -1,0 +1,26 @@
+# ftp下载任务配置
+
+# ftp连接信息,变量名不可更改
+# host：主机ip     port：端口     user：用户     pass：密码
+# connNum：连接失败重试的次数     connsleep：重试等待的时间/分钟
+[FtpConnectConfig]
+host = 10.254.50.249
+port = 1160
+user = ftp5711
+pass = Ftp5711!
+connNum = 5
+connSleep = 10
+
+# 日志打印配置
+[LoggingConfig]
+loggingPath = /app/cbapp/ftp_monitor/log
+loggingFileName = FtpFileDeleteNwe_
+
+
+# 文件检索及下载配置
+[SearchFile]
+Search-1 = {"filePath":"/outgoing/CM_OSP/gold", "fileDeleteTime":24, "fileRegular":"goldCoins.*"}
+
+# 本地备份的文件目录
+[downPath]
+downPath = /app/cbftp/backups
