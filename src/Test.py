@@ -4,3 +4,4 @@ if __name__ == '__main__':
     # str = "^Ftp.*(\.py)$"
     reCompile = re.compile("goldCoins.*")
     print( not reCompile.search("goldCoins_invalid_571_*"))
+    print("哈哈哈")
