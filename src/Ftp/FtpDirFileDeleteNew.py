@@ -10,11 +10,12 @@ import time
 import datetime
 import logging
 import json
-import sys
-import os
 import re
-import ConfigParser as configparser
 import os
+# python 2.0
+# import ConfigParser as configparser
+# python 3.0以上
+import configparser as configparser
 
 
 # 获取配置信息
@@ -90,7 +91,7 @@ def resetLoggin(config):
     logger.setLevel(logging.INFO)
     logFileHandler = logging.FileHandler(loggingFile, mode='a', encoding="utf-8")
     logFileHandler.setLevel(logging.DEBUG)
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')  # line:60
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     logFileHandler.setFormatter(formatter)
     logger.addHandler(logFileHandler)
 
